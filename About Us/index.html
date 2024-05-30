@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Blooms - About Us</title>
+        <link rel="shortcut icon" href="./img/Blooms.png" type="image/svg+xml">
+        <link rel="stylesheet" href="style.css">
+        <script src="https://kit.fontawesome.com/dbed6b6114.js" crossorigin="anonymous"></script>
+    </head>
+    <body>
+        <section>
+            <div class = "image"></div>
+            <div class = "content">
+                <h2>About Us</h2>
+                <span></span>
+                <h3>Nice To Meet You</h3>
+                <p>We are Boumerah and Keziz, co-founders of Blooms. Our journey started when we were trying to ease the communication problem between vendor and customer for a better environment in our life, the rest has become history.!</p>
+                <ul class = "links">
+                    <li><a href = "#" onclick="openPopup()">Why Us</a></li>
+                    <div class = "vertical-line"></div>
+                    <li><a href = "#" onclick="openPopup()">Service</a></li>
+                    <div class = "vertical-line"></div>                  
+                    <li><a href = "file:///C:/Users/DELL%20INSPIRON%203593/Desktop/Blooms/Home%20Page/index.html">Back</a></li>
+                </ul>
+                <div class="popup" id="popup">
+                    <h3>Why Choose Us?</h3>
+                    <p>We are innovative and passionate about the work we do. We always come up with new ways to enrich your revenue to greater heights</p>
+                    <button type="button" onclick="closePopup()">Understood</button>
+                </div>
+                <div class="popup" id="popup2">
+                    <h3>Our Service</h3>
+                    <p>We are innovative and passionate about the work we do. We always come up with new ways to enrich your revenue to greater heights</p>
+                    <button type="button" onclick="closePopup()">Understood</button>
+                </div>
+                <ul class = "icons">
+                    <li>
+                        <i class = "fa fa-facebook"></i>
+                    </li>
+                    <li>
+                        <i class = "fa fa-instagram"></i>
+                    </li>
+                    <li>
+                        <i class = "fa fa-twitter"></i>
+                    </li>
+                </ul>
+            </div>
+        </section>   
+        <script>
+            let popup = document.getElementById("popup");
+            function openPopup(){
+                popup.classList.add("open-popup");
+            }
+            function closePopup(){
+                popup.classList.remove("open-popup");
+            }
+
+            let popup2 = document.getElementById("popup2");
+            function openPopup(){
+                popup2.classList.add("open-popup");
+            }
+            function closePopup(){
+                popup2.classList.remove("open-popup");
+            }
+        </script>
+    </body>
+</html>

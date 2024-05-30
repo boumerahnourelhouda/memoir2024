@@ -1,0 +1,223 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap');
+
+:root{
+    --pink-body: #ded0c5;
+    --pink-header:  #ece3da;
+    --pink-shadow: #c8b4a7;
+    --black: #000000;
+    --black-help: #333;
+    --white: #fff;
+
+
+
+    --great: Georgia, 'Times New Roman', Times, serif;
+    --fantasy: fantasy;
+    --play: 'Playfair Display', serif;
+    --pop: 'Poppins', sans-serif;
+
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: var(--pink-body);
+    font-family: 'Playfair Display', serif;
+}
+
+.contact{
+    position: relative;
+    min-width: 100vh;
+    padding: 50px 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: var(--pink-body);
+    background-size: cover;
+}
+
+.content{
+    max-width: 800px;
+    text-align: center;
+    display: contents;
+}
+
+.content h2{
+    text-transform: uppercase;
+    font-size: 36px;
+    letter-spacing: 6px;
+    opacity: 0.9;
+}
+
+.content span{
+    height: 0.5px;
+    width: 80px;
+    background: var(--black);
+    margin: 20px 0;
+}
+
+.content p{
+    font-weight: 300;
+    color: var(--black-help);
+}
+
+.container{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+}
+
+.container .contactInfo{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+}
+
+.contactInfo .box{
+    position: relative;
+    padding: 20px 0;
+    display: flex;
+}
+
+.contactInfo .box .icon{
+    min-width: 60px;
+    height: 60px;
+    background: transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 0.5px solid var(--black-help);
+    box-shadow: 1px 1px 1px 1px var(--pink-shadow);
+    border-radius: 40%;
+    font-size: 22px;
+}
+
+.contactInfo .box .icon:hover{
+    border-color: var(--pink-shadow);
+}
+
+.contactInfo .box .text{
+    display: flex;
+    margin-left: 20px;
+    font-size: 16px;
+    color: var(--black-help);
+    flex-direction: column;
+    font-weight: 500;
+}
+.contactInfo .box .text h3{
+    font-weight: 800;
+    color: var(--black);
+}
+
+.contactInfo .box .icon2 li{
+    border: 0.5px solid var(--black-help);
+    box-shadow: 1px 1px 1px 1px var(--pink-shadow);
+    list-style: none;
+    border-radius: 40px;
+    padding: 10px 70px;
+    text-align: center;
+}
+
+.contactInfo .box .icon2 a{
+    text-transform: uppercase;
+    color: var(--black-help);
+    text-decoration: none;
+}
+
+.contactInfo .box .icon2{
+    text-transform: uppercase;
+    color: var(--black-help);
+    text-decoration: none;
+}
+
+.contactInfo .box .icon2 li:hover{
+    border-color: var(--pink-shadow);
+}
+
+.contactForm{
+    width: 40%;
+    padding: 40px;
+    background: var(--pink-header);
+    box-shadow: 1px 1px 1px 1px var(--pink-shadow);
+}
+
+.contactForm h2{
+    font-size: 30px;
+    color: var(--black);
+    font-weight: 700;
+    text-align: center;
+}
+
+.contactForm .inputBox{
+    position: relative;
+    width: 100%;
+    margin-top: 10px;
+}
+
+.contactForm .inputBox input, .contactForm .inputBox textarea{
+    width: 100%;
+    padding: 5px 0;
+    font-size: 16px;
+    margin: 10px 0;
+    border: none;
+    color: var(--pink-shadow);
+    border-bottom: 2px solid var(--pink-header);
+    box-shadow: 1px 1px 1px 1px var(--pink-shadow);
+    outline: none;
+    resize: none;
+}
+
+.contactForm .inputBox span{
+    position: absolute;
+    left: 0;
+    padding: 5px 0;
+    font-size: 16px;
+    margin: 10px 0;
+    pointer-events: none;
+    transition: 0.5s;
+    color: var(--black-help);
+}
+
+.contactForm .inputBox input:focus ~ span, .contactForm .inputBox input:valid ~ span, .contactForm .inputBox textarea:focus ~ span, .contactForm .inputBox textarea:valid ~ span{
+    color: var(--black-help);
+    font-size: 12px;
+    transform: translateY(-20px);
+}
+
+.contactForm .inputBox input[type="submit"]{
+    background: transparent;
+    border: 0.5px solid var(--black-help);
+    box-shadow: 1px 1px 1px 1px var(--pink-shadow);
+    border-radius: 5px;
+    color: var(--black-help);
+    cursor: pointer;
+    padding: 10px;
+    font-size: 18px;
+}
+
+.contactForm .inputBox input:hover{
+    border-color: var(--pink-shadow);
+}
+
+/*****************/
+
+@media(max-width: 991px){
+    .contact{
+        padding: 50px;
+    }
+    .container{
+        flex-direction: column;
+    }
+    .container .contactInfo{
+        margin-bottom: 40px;
+    }
+    .container .contactInfo, .contactForm{
+        width: 100%;
+    }
+}

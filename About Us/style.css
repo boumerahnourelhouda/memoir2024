@@ -1,0 +1,228 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&display=swap');
+
+:root{
+    --pink-body: #ded0c5;
+    --pink-header:  #ece3da;
+    --pink-shadow: #c8b4a7;
+    --black: #000000;
+    --black-help: #333;
+    --white: #fff;
+
+
+
+    --great: Georgia, 'Times New Roman', Times, serif;
+    --fantasy: fantasy;
+    --play: 'Playfair Display', serif;
+    --pop: 'Poppins', sans-serif;
+
+}
+
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    font-family: var(--play);
+    display: grid;
+    background: var(--pink-body);
+    align-content: center;
+    min-height: 100vh;
+}
+
+section{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    min-height: 90vh;
+    width: 85vw;
+    margin: 0 auto;
+}
+
+.image{
+    background: url("img/image.jpg") center/cover no-repeat;
+}
+
+.content{
+    background: var(--pink-header);
+    box-shadow: 1px 1px 1px 1px var(--pink-shadow);
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.content h2{
+    text-transform: uppercase;
+    font-size: 36px;
+    letter-spacing: 6px;
+    opacity: 0.9;
+}
+
+.content span{
+    height: 0.5px;
+    width: 80px;
+    background: var(--black);
+    margin: 30px 0;
+}
+
+.content h3{
+    text-transform:capitalize;
+    padding-bottom: 15px;
+    font-weight: 600;
+    opacity: 0.7;
+    width: 60%;
+    text-align: center;
+    margin: 0 auto;
+    line-height: 1.7;
+}
+
+.content p{
+    padding-bottom: 15px;
+    font-weight: 500;
+    opacity: 0.7;
+    width: 60%;
+    text-align: center;
+    margin: 0 auto;
+    line-height: 1.7;
+}
+
+.links{
+    margin: 15px auto;
+}
+
+.links li{
+    border: 0.5px solid var(--black-help);
+    box-shadow: 1px 1px 1px 1px var(--pink-body);
+    list-style: none;
+    border-radius: 5px;
+    padding: 10px 70px;
+    text-align: center;
+}
+
+.links li a{
+    text-transform: uppercase;
+    color: var(--black-help);
+    text-decoration: none;
+}
+
+.links li:hover{
+    border-color: var(--pink-shadow);
+}
+
+.links li:hover a{
+    color :var(--pink-shadow);
+}
+
+.vertical-line{
+    height: 30px;
+    width: 0.5px;
+    background: var(--black-help);
+    margin: 0 auto;
+}
+
+.popup{
+    width: 500px;
+    background: var(--pink-body);
+    box-shadow: 1px 1px 1px 1px var(--pink-shadow);
+    border-radius: 6px;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%,-50%) scale(0.1);
+    text-align: center;
+    padding: 0 30px 30px;
+    color: var(--black);
+    visibility: hidden;
+    transition: transform 0.4s, top 0.4s;
+}
+
+.open-popup{
+    visibility: visible;
+    top: 50%;
+    transform: translate(-50%,-50%) scale(1);
+}
+
+.popup h3{
+    font-size: 30px;
+    font-weight: 500;
+    margin: 50px 20% 10px;
+    text-align: center;
+}
+
+.popup button{
+    width: 100%;
+    margin-top: 50px;
+    padding: 10px 0;
+    background: var(--pink-header);
+    color: var(--black-help);
+    border: 0.5px solid var(--black-help);
+    outline: none;
+    font-size: 18px;
+    border-radius: 4px;
+    cursor: pointer;
+    box-shadow: 1px 1px 1px 1px var(--pink-shadow);
+}
+
+.popup button:hover{
+    border-color: var(--pink-shadow);
+    color :var(--pink-shadow);
+}
+
+.icons{
+    display: flex;
+    padding: 15px 0;
+}
+
+.icons li{
+    display: block;
+    padding: 5px;
+    margin: 10px;
+}
+
+.icons li i{
+    font-size: 20px;
+    opacity: 0.8;
+}
+
+.icons li i:hover{
+    color: var(--pink-shadow);
+}
+
+
+/*****************/
+
+@media(max-width: 992px){
+    section{
+        grid-template-columns: 1fr;
+        width: 100%;
+    }
+    .image{
+        height: 100vh;
+    }
+    .content{
+        height: 100vh;
+    }
+    .content h2{
+        font-size: 20px;
+        margin-top: 50px;
+    }
+    .content span{
+        margin: 20px 0;
+    }
+    .content p{
+        font-size: 14px;
+    }
+    .links li a{
+        font-size: 14px;
+    }
+    .links{
+        margin: 5px 0;
+    }
+    .links li{
+        padding: 6px 10px;
+    }
+    .icons li i{
+        font-size: 15px;
+    }
+}
